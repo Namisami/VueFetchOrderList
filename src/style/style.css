@@ -66,8 +66,6 @@ html {
   text-align: center;
   margin: 0;
 }
-.orders, .shipments {
-}
 .orders__refresh, .shipments__refresh {
   position: relative;
   top: -35px;
@@ -100,10 +98,6 @@ html {
   border: 1px solid rgba(128, 128, 128, 0.401);
   border-radius: 10px;
   box-shadow: 0 0 5px grey;
-}
-.order {
-}
-.shipment {
 }
 .order__name, .order__price, .shipment__name, .shipment__date {
   margin: auto 0;
