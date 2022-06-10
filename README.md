@@ -1,24 +1,6 @@
-# laba13
+# Возможные улучшения
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+1. Закрытие модального окна опций по клику вне него.
+1. При использовании Drag-n-Drop выделять drop-область.
+1. В модальном окне заказа пока запрос не будет обработан выводить loader.
+1. При отгрузке или отмене выводить уведомление о успешности операции.
