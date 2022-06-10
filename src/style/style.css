@@ -352,6 +352,9 @@ p.dark, h1.dark, h2.dark, label.dark, .options__more.dark, .options__post.dark:h
 .options__cancel.dark:hover {
   background-color: rgba(211, 55, 55, 0.879);
 }
+.body.blur {
+  overflow: hidden;
+}
 .body.blur, .header__slider.blur, .options__option.blur {
   background-color: #00000069;
 }
