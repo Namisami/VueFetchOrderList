@@ -328,8 +328,11 @@ html {
 .body, .options__option, ul, .more {
   transition: 0.3s background-color;
 }
-.body.dark, .options__option.dark, ul.dark, .more.dark {
+.body.dark, .options__option.dark, ul.dark  {
   background-color: var(--dark-bg);
+}
+.more.dark {
+  background-color: #272727;
 }
 p, h1, h2, label, .options__more, .options__post:hover, .options__cancel:hover, .product {
   transition: 0.3s color;
@@ -348,6 +351,12 @@ p.dark, h1.dark, h2.dark, label.dark, .options__more.dark, .options__post.dark:h
 }
 .options__cancel.dark:hover {
   background-color: rgba(211, 55, 55, 0.879);
+}
+.body.blur, .header__slider.blur, .options__option.blur {
+  background-color: #00000069;
+}
+button.blur, a.blur {
+  background-color: rgb(78 115 144 / 77%);
 }
 @media (max-width: 1040px) {
   .header {

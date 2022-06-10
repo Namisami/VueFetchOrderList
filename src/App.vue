@@ -57,6 +57,7 @@ export default {
         if (event.target.classList[0].slice(0,4) != "more" &&
           event.target.classList[0].slice(0,7) != "product" &&
           event.target.classList[1] != "more") {
+            this.returnOldColors();
             this.currentOrder = null;
           }
       } catch(error) {
@@ -100,6 +101,26 @@ export default {
       }
       for (let el of ul) {
         el.classList.toggle("dark");
+      }
+    },
+    returnOldColors: function() {
+      if (this.dark != "dark") {
+        const body = document.querySelector("body");
+        body.classList.remove("blur");
+        const button = document.getElementsByTagName("button");
+        for (let el of button) {
+          el.classList.remove("blur");
+        }
+        const a = document.getElementsByTagName("a");
+        for (let el of a) {
+          el.classList.remove("blur");
+        }
+        const options = document.querySelectorAll(".options__option");
+        for (let el of options) {
+          el.classList.remove("blur");
+        }
+        const slider = document.querySelector(".header__slider");
+        slider.classList.remove("blur");
       }
     }
   }

@@ -104,19 +104,60 @@ export default {
     closeInfoByEsc: function(e) {
       if (e.key == 'Escape') {
         this.closeInfo();
+        this.returnOldColors();
       }
     },
     closeInfo: function() {
       this.$emit('updateParent', {
           currentOrder: null,
       })
+      this.returnOldColors();
+    },
+    returnOldColors: function() {
+      if (this.dark != "dark") {
+        const body = document.querySelector("body");
+        body.classList.remove("blur");
+        const button = document.getElementsByTagName("button");
+        for (let el of button) {
+          el.classList.remove("blur");
+        }
+        const a = document.getElementsByTagName("a");
+        for (let el of a) {
+          el.classList.remove("blur");
+        }
+        const options = document.querySelectorAll(".options__option");
+        for (let el of options) {
+          el.classList.remove("blur");
+        }
+        const slider = document.querySelector(".header__slider");
+        slider.classList.remove("blur");
+      }
     }
   },
   created: function() {
     this.getOrderElements();
+
+    if (this.dark != "dark") {
+      const body = document.querySelector("body");
+      body.classList.add("blur");
+
+      const button = document.getElementsByTagName("button");
+      for (let el of button) {
+        el.classList.add('blur');
+      }
+      const a = document.getElementsByTagName("a");
+      for (let el of a) {
+        el.classList.add('blur');
+      }
+      const options = document.querySelectorAll(".options__option");
+      for (let el of options) {
+        el.classList.add("blur");
+      }
+      const slider = document.querySelector(".header__slider");
+      slider.classList.add("blur");
+    }
   },
   updated() {
-    
     if (this.dark=="dark") {
       const p =document.getElementsByTagName("p");
       for (let el of p) {
