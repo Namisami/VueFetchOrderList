@@ -55,7 +55,7 @@ export default {
     getOrderList: function() {
       this.orders.length = 0;
       this.orders.shift();
-      fetch("https://justcors.com/tl_68a61b8/https://demo-api.vsdev.space/api/orders_admin/2021-0606/orders/")
+      fetch("https://justcors.com/tl_124fa38/https://demo-api.vsdev.space/api/orders_admin/2021-0606/orders/")
       .then((response) => {
         response = response.json();
         return response.then((data) => this.getOrderInfo(data));
@@ -71,7 +71,7 @@ export default {
       }
     },
     postNewShipment: function() {
-      fetch("https://justcors.com/tl_68a61b8/https://demo-api.vsdev.space/api/orders_admin/2021-0606/orders/" + this.currentOrder.id + "/delivery", {
+      fetch("https://justcors.com/tl_124fa38/https://demo-api.vsdev.space/api/orders_admin/2021-0606/orders/" + this.currentOrder.id + "/delivery", {
             method: "POST",
             headers : { 
             'Content-Type': 'application/json',

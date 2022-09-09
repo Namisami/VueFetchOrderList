@@ -49,7 +49,7 @@ export default {
     getShipmentList: async function() {
       this.shipments.length = 0;
       this.shipments.shift();
-      fetch("https://justcors.com/tl_68a61b8/https://demo-api.vsdev.space/api/orders_admin/2021-0606/deliveries")
+      fetch("https://justcors.com/tl_124fa38/https://demo-api.vsdev.space/api/orders_admin/2021-0606/deliveries")
       .then((response) => {
         response = response.json();
         return response.then((data) => this.getShipmentInfo(data));
@@ -84,7 +84,7 @@ export default {
       e.dataTransfer.dropEffect="move";
     },
     postNewShipment: function(id) {
-      fetch("https://justcors.com/tl_68a61b8/https://demo-api.vsdev.space/api/orders_admin/2021-0606/orders/" + id + "/delivery", {
+      fetch("https://justcors.com/tl_124fa38/https://demo-api.vsdev.space/api/orders_admin/2021-0606/orders/" + id + "/delivery", {
             method: "POST",
             headers : { 
             'Content-Type': 'application/json',

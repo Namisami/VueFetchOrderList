@@ -62,7 +62,7 @@ export default {
     getOrderElements: function() {
       this.order = {};
       this.basketItems.length = 0;
-      fetch("https://justcors.com/tl_68a61b8/https://demo-api.vsdev.space/api/orders_admin/2021-0606/orders/" + this.id + "/")
+      fetch("https://justcors.com/tl_124fa38/https://demo-api.vsdev.space/api/orders_admin/2021-0606/orders/" + this.id + "/")
       .then((response) => {
         response = response.json();
         return response.then((data) => this.getOrderInfo(data));
@@ -84,7 +84,7 @@ export default {
       }
     },
     postNewShipment: function() {
-      fetch("https://justcors.com/tl_68a61b8/https://demo-api.vsdev.space/api/orders_admin/2021-0606/orders/" + this.id + "/delivery", {
+      fetch("https://justcors.com/tl_124fa38/https://demo-api.vsdev.space/api/orders_admin/2021-0606/orders/" + this.id + "/delivery", {
             method: "POST",
             headers : { 
             'Content-Type': 'application/json',
